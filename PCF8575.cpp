@@ -39,7 +39,7 @@ void PCF8575::pinMode(uint8_t pin, uint8_t mode) {
 	switch (mode) {
 	case INPUT:
 		_DDR &= ~(1 << pin);  //Set 0
-		_PORT &= ~(1 << pin); //Set 0
+		_PORT |= (1 << pin);  //Set 1
 		break;
 
 	case OUTPUT:
