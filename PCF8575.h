@@ -54,7 +54,7 @@ public:
 	/**
 	 * Start the I2C controller and store the PCF8575 chip address
 	 */
-	void begin(uint8_t address = 0x21);
+	void begin(uint8_t address = 0x21, uint32_t speed = 800000);
 
 	/**
 	 * Set the direction of a pin (OUTPUT, INPUT or INPUT_PULLUP)

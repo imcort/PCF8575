@@ -24,12 +24,12 @@ PCF8575::PCF8575() :
 {
 }
 
-void PCF8575::begin(uint8_t address) {
+void PCF8575::begin(uint8_t address, const uint32_t speed) {
 
 	/* Store the I2C address and init the Wire library */
 	_address = address;
 	Wire.begin();
-	Wire.setClock(800000);
+	Wire.setClock(speed);
 	readGPIO();
 }
 
